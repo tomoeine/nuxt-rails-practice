@@ -1,6 +1,6 @@
 FROM node:14-slim
 
-WORKDIR /app/front
+WORKDIR /app
 
 ENV PATH /app/node_modules/.bin:$PATH
 
@@ -16,5 +16,5 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY ./front/package.json /app/package.json
 COPY ./front/yarn.lock /app/yarn.lock
 
-RUN yarn install --no-progress --registry http://registry.npmjs.org/
+RUN yarn install
 ENV HOST 0.0.0.0

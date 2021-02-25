@@ -51,7 +51,7 @@ services:
       - 3000:3000
     command: yarn dev
     volumes:
-      - yarn_install:/app/front/node_modules
+      - yarn_install:/app/node_modules
       - ./front:/app
       - ./public:/public
 

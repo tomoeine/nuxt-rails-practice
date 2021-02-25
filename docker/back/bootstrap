@@ -1,4 +1,0 @@
-docker-compose run --rm api bundle install
-docker-compose run --rm api ./bin/rails db:create
-docker-compose run --rm api ./bin/rails db:migrate
-
