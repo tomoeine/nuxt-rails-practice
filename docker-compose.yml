@@ -26,7 +26,7 @@ services:
     volumes:
       - bundle_install:/usr/local/bundle
       - ./back:/app
-      # 1. exclude volumes
+      # exclude volumes
       - /app/.git
       - /app/.github
       - /app/.idea
@@ -39,24 +39,8 @@ services:
     environment:
       TZ: Asia/Tokyo
 
-  # --------------------------------------------------------------------------------
-  # Frontend
-  # --------------------------------------------------------------------------------
-  front:
-    build:
-      context: .
-      dockerfile: ./docker/front/Dockerfile
-    tty: true
-    ports:
-      - 3000:3000
-    command: yarn dev
-    volumes:
-      - yarn_install:/app/node_modules
-      - ./front:/app
-      - ./public:/public
-
 volumes:
   mysql-data:
     driver: local
   bundle_install:
-  yarn_install:
+
