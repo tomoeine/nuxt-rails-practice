@@ -36,6 +36,7 @@ class AuthorsController < ApplicationController
   # DELETE /authors/1
   def destroy
     @author.destroy
+    render body: nil, status: :no_content
   end
 
   private
