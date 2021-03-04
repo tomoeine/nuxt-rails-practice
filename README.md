@@ -21,6 +21,7 @@ docker-compose run --rm back bundle exec rails db:seed_fu
 
 // Initialize frontend
 cp ./front/.env.example ./front/.env
+cd front
 yarn install
 ```
 
@@ -34,10 +35,3 @@ yarn dev
 
 Now you can access nuxt app on your web browser.
 http://localhost:3000
-
-## How to
-### Add libraries for front
-
-```bash
-docker-compose exec front yarn add @nuxtjs/axios
-```
