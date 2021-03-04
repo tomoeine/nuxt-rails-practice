@@ -21,7 +21,7 @@ export default {
   },
   async created() {
     try {
-      const { data } = await this.$axios.get("/authors");
+      const { data } = await this.$repositories.author.index();
       this.authors = data;
     } catch (e) {
       console.error(e);

@@ -21,7 +21,7 @@ export default {
   methods: {
     async onClickSubmitButton() {
       try {
-        await this.$axios.post("/authors", { name: this.name });
+        await this.$repositories.author.create({ name: this.name });
         this.$router.push("/authors");
       } catch (e) {
         console.error(e);
